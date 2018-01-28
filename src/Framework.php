@@ -17,7 +17,7 @@
          * @throws KernelNotFoundException
          * @throws RuntimeException
          */
-        public function __construct(array $kernel)
+        public function __construct($kernel)
         {
             if (!FrameworkConfiguration::$baseDir) {
                 throw new RuntimeException('Base dir not setted');
