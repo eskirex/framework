@@ -16,7 +16,9 @@
     "eskirex/session": "dev-master",
     "eskirex/helper": "dev-master",
     "eskirex/config": "dev-master",
-    "eskirex/http": "dev-master"
+    "eskirex/http": "dev-master",
+    "wyrihaximus/html-compress": "^1.4",
+    "twig/twig": "^2.4"
 
   },
   "minimum-stability": "dev",

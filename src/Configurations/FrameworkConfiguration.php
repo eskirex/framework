@@ -7,29 +7,31 @@
 
     class FrameworkConfiguration
     {
-        const APPLICATION_DIR       = 'application';
+        const APPLICATION_DIR           = 'application';
 
-        const CONFIG_DIR            = 'config';
+        const CONFIG_DIR                = 'config';
 
-        const PUBLIC_DIR            = 'public';
+        const PUBLIC_DIR                = 'public';
 
-        const RESOURCE_DIR          = 'resource';
+        const RESOURCE_DIR              = 'resource';
 
-        const STORAGE_DIR           = 'storage';
+        const STORAGE_DIR               = 'storage';
 
-        const TEMP_DIR              = 'temp';
+        const TEMP_DIR                  = 'temp';
 
-        const TEMPLATE_DIR          = 'template';
+        const TEMPLATE_DIR              = 'template';
 
-        const APPLICATION_NAMESPACE = 'Application';
+        const APPLICATION_NAMESPACE     = 'Application';
 
-        const COMMANDS_NAMESPACE    = 'Commands';
+        const COMMANDS_NAMESPACE        = 'Commands';
 
-        const CONTROLLERS_NAMESPACE = 'Controllers';
+        const CONTROLLERS_NAMESPACE     = 'Controllers';
 
-        const LIBRARIES_NAMESPACE   = 'Libraries';
+        const LIBRARIES_NAMESPACE       = 'Libraries';
 
-        const MODELS_NAMESPACE      = 'Models';
+        const MODELS_NAMESPACE          = 'Models';
+
+        const CONTROLLER_DEFAULT_METHOD = 'index';
 
         public static $baseDir;
 
