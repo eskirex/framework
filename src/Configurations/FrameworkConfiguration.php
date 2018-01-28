@@ -35,6 +35,8 @@
 
         const CLI_KERNEL                = 'cli';
 
+        const HTTP_KERNEL               = 'http';
+
         public static $baseDir;
 
         public static $applicationDir;
