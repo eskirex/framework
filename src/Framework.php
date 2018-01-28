@@ -2,14 +2,35 @@
 
     namespace Eskirex\Component\Framework;
 
+    use Eskirex\Component\Config\Config;
     use Eskirex\Component\Framework\Configurations\FrameworkConfiguration;
+    use Eskirex\Component\Framework\Exceptions\KernelNotFoundException;
+    use Eskirex\Component\Framework\Exceptions\RuntimeException;
     use Eskirex\Component\Framework\Exceptions\InvalidArgumentException;
 
     class Framework
     {
+        /**
+         * Framework constructor.
+         * @param array $kernel
+         * @throws InvalidArgumentException
+         * @throws KernelNotFoundException
+         * @throws RuntimeException
+         */
         public function __construct(array $kernel)
         {
-            foreach ($kernel as $class) {
+            if (!FrameworkConfiguration::$baseDir) {
+                throw new RuntimeException('Base dir not setted');
+            }
+
+            $kernelConfig = new Config('Kernel');
+            $kernels = $kernelConfig->get($kernel);
+
+            if(!$kernels){
+                throw new KernelNotFoundException('Kernel not found');
+            }
+
+            foreach ($kernels as $class) {
                 if (!class_exists($class)) {
                     throw new InvalidArgumentException("Invalid kernel class {$class}");
                 }
