@@ -1,6 +1,6 @@
 <?php
 
-    namespace Eskirex\Component\Web\Twig;
+    namespace Eskirex\Component\Framework\Configurations;
 
     class TwigConfiguration
     {

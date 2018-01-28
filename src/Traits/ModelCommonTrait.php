@@ -1,6 +1,6 @@
 <?php
 
-namespace Eskirex\Component\Web\Traits;
+namespace Eskirex\Component\Framework\Traits;
 
 use Eskirex\Component\Config\Config;
 

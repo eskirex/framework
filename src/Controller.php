@@ -1,6 +1,6 @@
 <?php
 
-namespace Eskirex\Component\Web\MVC;
+namespace Eskirex\Component\Framework;
 
 use Eskirex\Component\HTTP\Request;
 use Eskirex\Component\HTTP\Response;

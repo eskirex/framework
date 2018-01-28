@@ -48,7 +48,7 @@ class Routing
 
         if (is_string($callback)) {
 
-            $class = Web::config('controller.namespace') . '\\' . $callback;
+            $class = Framework::config('controller.namespace') . '\\' . $callback;
             $action = $this->isAction($callback);
 
             if (class_exists($class)) {
@@ -59,7 +59,7 @@ class Routing
                     return $controller->{$method}($this->request, $this->response);
                 }
 
-                return $controller->{Web::config('controller.default_method')}();
+                return $controller->{Framework::config('controller.default_method')}();
             }
 
             return $callback;
@@ -73,7 +73,7 @@ class Routing
         $parseHandler = explode('\\', $callback);
         $isXhr = isset($_SERVER['HTTP_X_REQUESTED_WITH']) ? true : false;
 
-        $action = Web::config('controller.namespace') . '\\' . $parseHandler[0] . '\Action' . ($isXhr ? '\XHR' : '') . '\\' . $requestMethod . 'Action';
+        $action = Framework::config('controller.namespace') . '\\' . $parseHandler[0] . '\Action' . ($isXhr ? '\XHR' : '') . '\\' . $requestMethod . 'Action';
 
         if (class_exists($action)) {
             return $action;

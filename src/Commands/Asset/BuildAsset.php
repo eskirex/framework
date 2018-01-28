@@ -1,6 +1,6 @@
 <?php
 
-    namespace Eskirex\Component\Web\Console\Commands\Asset;
+    namespace Eskirex\Component\Framework\Commands\Asset;
 
     use Eskirex\Component\Console\Command;
     use Eskirex\Component\Console\Output;

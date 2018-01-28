@@ -1,9 +1,9 @@
 <?php
 
-namespace Eskirex\Component\Web\MVC;
+namespace Eskirex\Component\Framework;
 
 use Eskirex\Component\Config\Config;
-use Eskirex\Component\Web\Traits\ModelTrait;
+use Eskirex\Component\Framework\Traits\ModelTrait;
 
 class Model
 {

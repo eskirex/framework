@@ -1,18 +1,16 @@
 <?php
 
-namespace Eskirex\Component\Web\Traits;
+namespace Eskirex\Component\Framework\Traits;
 
 use Eskirex\Component\Dotify\Dotify;
 
 trait WebTrait
 {
-    /**
-     * @var Dotify
-     */
+
     public static $config;
 
 
-    protected static function doConfigure($set)
+    protected static function doConfigure($config)
     {
         if (static::$config === null) {
             static::$config = new Dotify();

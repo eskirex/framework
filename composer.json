@@ -13,18 +13,17 @@
   ],
   "require": {
     "php": "^7.1.3",
-    "eskirex/http": "dev-master",
-    "eskirex/config": "dev-master",
     "eskirex/session": "dev-master",
-    "eskirex/dotify": "dev-master",
-    "twig/twig": "^2.4",
-    "wyrihaximus/html-compress": "^1.2"
+    "eskirex/helper": "dev-master",
+    "eskirex/config": "dev-master",
+    "eskirex/http": "dev-master"
+
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
   "autoload": {
     "psr-4": {
-      "Eskirex\\Component\\Web\\": "src"
+      "Eskirex\\Component\\Framework\\": "src"
     },
     "files": [
       "src/helpers.php"

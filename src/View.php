@@ -1,10 +1,10 @@
 <?php
 
-namespace Eskirex\Component\Web\MVC;
+namespace Eskirex\Component\Framework;
 
 use Eskirex\Component\Config\Config;
 use Eskirex\Component\Web\Twig\TwigConfiguration;
-use Eskirex\Component\Web\Web;
+use Eskirex\Component\Web\Framework;
 use Twig_Environment;
 use Twig_Filter;
 use Twig_Function;
@@ -26,7 +26,7 @@ class View
     {
         $this->config = new Config('View');
 
-        $loader = new Twig_Loader_Filesystem(Web::config('view.dir'));
+        $loader = new Twig_Loader_Filesystem(Framework::config('view.dir'));
 
         $options = [
             'debug'               => false,
@@ -34,7 +34,7 @@ class View
             'base_template_class' => 'Twig_Template',
             'strict_variables'    => false,
             'autoescape'          => 'html',
-            'cache'               => Web::config('var.dir') . 'twig',
+            'cache'               => Framework::config('var.dir') . 'twig',
             'auto_reload'         => true,
             'optimizations'       => -1,
         ];
