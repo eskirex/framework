@@ -46,6 +46,10 @@
                     new $class();
                 }
             }
+            if(isset($console)){
+                echo 123;
+                $console->run();
+            }
         }
 
 
