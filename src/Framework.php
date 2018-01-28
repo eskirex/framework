@@ -27,8 +27,12 @@
             $kernelConfig = new Config('Kernel');
             $applicationConfig = new Config('Application');
 
-            if (!$kernels = $kernelConfig->get($kernel)) {
+            if (($kernels = $kernelConfig->get($kernel)) === null) {
                 throw new KernelNotFoundException('Kernel not found');
+            }
+
+            if(empty($kernels)){
+                return;
             }
 
             if ($kernel === FrameworkConfiguration::CLI_KERNEL) {
