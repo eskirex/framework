@@ -79,7 +79,7 @@
             $tempDir = $baseDir . DS . ($data['temp_dir'] ?? self::TEMP_DIR) . DS;
             $templateDir = $baseDir . DS . ($data['template_dir'] ?? self::TEMPLATE_DIR) . DS;
 
-            $commandsDir = $baseDir . DS . self::COMMANDS_NAMESPACE . DS;
+            $commandsDir = $applicationDir . DS . self::COMMANDS_NAMESPACE . DS;
             $commandsNamespace = self::APPLICATION_NAMESPACE . "\\" . self::COMMANDS_NAMESPACE . "\\";
 
             $controllersDir = $applicationDir . self::CONTROLLERS_NAMESPACE . DS;
