@@ -19,7 +19,8 @@
     "eskirex/http": "dev-master",
     "wyrihaximus/html-compress": "^1.4",
     "twig/twig": "^2.4",
-    "doctrine/dbal": "^2.6"
+    "doctrine/dbal": "^2.6",
+    "eskirex/console": "dev-master"
 
   },
   "minimum-stability": "dev",
@@ -29,7 +30,7 @@
       "Eskirex\\Component\\Framework\\": "src"
     },
     "files": [
-      "src/helpers.php"
+
     ]
   }
 }

@@ -33,6 +33,8 @@
 
         const CONTROLLER_DEFAULT_METHOD = 'index';
 
+        const CLI_KERNEL                = 'cli';
+
         public static $baseDir;
 
         public static $applicationDir;
