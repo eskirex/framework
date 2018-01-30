@@ -6,7 +6,7 @@
     use Eskirex\Component\Console\Output;
     use Eskirex\Component\Console\Input;
 
-    class BuildAsset extends Command
+    class MakeAsset extends Command
     {
         public function configure()
         {

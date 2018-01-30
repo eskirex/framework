@@ -6,7 +6,8 @@
     use Eskirex\Component\Console\Console;
     use Eskirex\Component\Console\Output;
     use Eskirex\Component\Console\Input;
-    use Eskirex\Component\Framework\Commands\Asset\BuildAsset;
+    use Eskirex\Component\Framework\Commands\Asset\MakeAsset;
+    use Eskirex\Component\Framework\Commands\Storage\LinkStorage;
     use Eskirex\Component\Framework\Configurations\FrameworkConfiguration;
     use Eskirex\Component\Framework\Exceptions\KernelNotFoundException;
     use Eskirex\Component\Framework\Exceptions\RuntimeException;
@@ -36,7 +37,9 @@
 
             if ($kernel === FrameworkConfiguration::CLI_KERNEL) {
                 $console = new Console($applicationConfig->get('console_name'), $applicationConfig->get('console_version'), $applicationConfig->get('language'));
-                $console->addCommand(new BuildAsset());
+                $console
+                    ->addCommand(new MakeAsset())
+                    ->addCommand(new LinkStorage());
             }
 
             if (!empty($kernels)) {
@@ -53,7 +56,7 @@
                 }
             }
             if (isset($console)) {
-                $console->run(new Input(),new Output());
+                $console->run(new Input(), new Output());
             }
         }
 
