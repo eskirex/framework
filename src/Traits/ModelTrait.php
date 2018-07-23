@@ -9,10 +9,7 @@ trait ModelTrait
 
     private function doInsert()
     {
-        print_r(self::buildQuery()
-            ->select('*')
-            ->execute()
-            ->fetchAll());
+
     }
 
 
